@@ -1,0 +1,61 @@
+body {
+   font-family: 'Courier New', monospace;
+   background-color: #282c34;
+   color: #eee;
+   line-height: 1.6;
+}
+
+
+.blog {
+   margin: auto;
+   max-width: 800px;
+}
+
+
+h1 {
+   font-size: 50px;
+   font-weight: 300;
+   color: #ff7f50;
+   text-align: center;
+}
+
+
+.card {
+   padding: 20px;
+   margin-bottom: 30px;
+   background-color: #343a40;
+   text-align: center;
+}
+
+
+a {
+ text-decoration: none;
+ color: #ff7f50;
+}
+.center {
+   margin: auto;
+   max-width: 800px;
+}
+input, textarea {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   margin-bottom: 10px;
+   box-sizing: border-box;
+}
+button{
+   background-color: coral;
+   color: #282c34;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.error-text{
+   color: red;
+}
+.navbar{
+   text-align: right;
+   margin:20px;
+}

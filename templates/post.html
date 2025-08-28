@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style1.css">
+    <meta charset="UTF-8">
+    <title>{{ post_data.title }}</title>
+</head>
+<body>
+        <div class="card">
+            <h2><a href="">{{ post_data.title }}</a></h2>
+            <p>{{ post_data.content }}</p>
+            <p>{{ post_data.date }}</p>
+            {% if current_user.id == post_data.author_id%}
+            <form method="POST" action="{{ url_for('delete', post_id = post_data.id) }}">
+                <button type="submit">delete</button>
+            </form>
+            {% endif %}
+        </div>
+        {% if current_user.is_authenticated  %}
+        <div class = 'comment_blog'>
+            <form method="POST" action="{{ url_for('comment', post_id=post_data.id) }}">
+                <label for="">comment</label>
+                <textarea name="comment" id="" cols="35" rows='7' required></textarea>
+                <button type="submit" >comment</button>
+            </form>
+        </div>
+        {% endif %}
+        {% for comment in comments %}
+        <div class='card'>
+             <h3>{{ comment.username }}</h3>
+            <br>
+            <p>{{ comment.comment }}</p>
+        </div>
+        {% endfor %}
+</body>
+</html>
